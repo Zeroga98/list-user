@@ -1,0 +1,12 @@
+{
+    "name": "app-list",
+    "private": true,
+    "version": "0.0.1",
+    "description": "app test",
+    "scripts": {
+        "start": "concurrently \"cd frontend && PORT=3000 npm start\" \"cd server && PORT=3001 npm start\""
+    },
+    "dependencies": {
+        "concurrently": "^4.1.1"
+    }
+}
