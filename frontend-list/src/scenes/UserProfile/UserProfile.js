@@ -1,57 +1,53 @@
 import React, { Component } from 'react';
 import './UserProfile.scss';
 import { connect } from 'react-redux';
-
+import userActions from '../../services/user/reducer';
 
 class UserProfile extends Component {
 
     constructor(props) {
         super(props);
+        this.props.getUser(this.props.match.params.id);
         this.state = {
             load: true
         };
     }
 
+    componentWillMount() {
+
+    }
+
     render() {
+        const { user } = this.props
         return (
             <div>
-                <div>
+                {user &&
                     <div className="banner">
                         <div className="d-flex banner-img">
-                            <img src={`https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg`} />
+                            <img src={user.avatar} />
                         </div>
                         <div className="info">
                             <div className="d-flex flex-column info-list">
-                                <img src={`https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg`} />
+                                <img src={user.avatar} />
+                                <span className="title">{`${user.first_name} ${user.last_name}`}</span>
                                 <span style={{ fontSize: '22px' }}>Información:</span>
-                                <span>Año: 2015</span>
-                                <span>Generos: accion </span>
-                                <span>hola</span>
+                                <span>email: {user.email}</span>
                             </div>
-                            <div className="detail d-flex flex-column mt-5 ml-4">
-                                <span className="title">sebastian</span>
-                                <span className="genered">accion</span>
-                                <span className="ranked">10</span>
-                            </div>
+
                         </div>
                     </div>
-                </div>
                 }
             </div>
         );
     }
 }
-const mapStateToProps = (state) => {
-    return {
+const mapStateToProps = state => ({
+    user: state.user.userProfile
+})
 
-    }
-}
 const mapDispatchToProps = {
-};
+    getUser: userActions.getUser
+}
 
-UserProfile = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(UserProfile);
 
-export default UserProfile;
+export default connect(mapStateToProps, mapDispatchToProps)((UserProfile));
