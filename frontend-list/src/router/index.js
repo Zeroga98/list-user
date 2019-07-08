@@ -3,6 +3,7 @@ import { Switch, withRouter, BrowserRouter as Router, Route } from 'react-router
 import React, { Component } from 'react';
 
 import Home from '../scenes/Home/Home'
+import UserProfile from '../scenes/UserProfile/UserProfile'
 import Header from '../components/header'
 import { RouteAuth } from '../router/route'
 
@@ -14,6 +15,7 @@ class RouterApp extends Component {
             <Router>
                 <Header className="App-header" ></Header>
                 <Route exact path="/" component={Home} />
+                <Route path="/user/:id" component={UserProfile} />
             </Router>
         );
     }
