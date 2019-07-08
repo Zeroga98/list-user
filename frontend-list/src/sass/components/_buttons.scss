@@ -1,0 +1,18 @@
+.Button__container{
+    display: flex;
+    justify-content: center;
+}
+.btn__resume {
+    background: linear-gradient(193.59deg, #1DBEF5 0%, #1D9AF5 95.85%);
+    border-radius: 36px;
+    padding: 10px 40px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 27px;
+    border: none;
+    margin: 10px auto;
+    font-weight: 700;
+    &.green{
+        background: linear-gradient(188.6deg, #35F98D -49.65%, #39CA15 82.46%);
+    }
+  }

@@ -1,0 +1,63 @@
+.form__item {
+  display: flex;
+  flex-direction: column;
+  padding: 0 23px;
+
+  .text__left {
+    text-align: left;
+    margin: 0 auto;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .ipt__label {
+    text-align: left !important;
+    padding: 10px 7px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #3E505C;
+  }
+
+  .ipt__container {
+    display: flex;
+    border-radius: 5px;
+    width: 300px;
+    height: 50px;
+    align-items: center;
+    border: 1px solid #D8D8D8;
+
+    .ipt__icon {
+      width: 56px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      border-right: 1px solid #D8D8D8;
+
+      img {
+        filter: grayscale(.7);
+      }
+    }
+
+    input {
+      width: 85%;
+      height: 85%;
+      border-radius: 5px;
+      border: none;
+      font-size: 20px;
+      padding: 0 9px;
+      color: #a2a2a2;
+      opacity: 1;
+      background-color: transparent;
+
+      &:focus {
+        outline: none !important;
+      }
+    }
+
+    select {
+      min-width: 205px;
+      height: 85%;
+    }
+  }
+
+}
