@@ -4,10 +4,10 @@
     "version": "0.0.1",
     "description": "app test",
     "scripts": {
-        "install": "concurrently \"cd frontend-list &&  npm install\" \"cd backend &&  npm  install\"",
-        "start": "concurrently \"cd frontend-list && PORT=3000 npm start\" \"cd backend && PORT=3001 npm  start\"",
+        "install": "concurrently \"cd frontend &&  npm install\" \"cd backend &&  npm  install\"",
+        "start": "concurrently \"cd frontend && PORT=3000 npm start\" \"cd backend && PORT=3001 npm  start\"",
         "start:prod": "cd backend && npm start",
-        "build": "cd frontend-list&& npm run build && mv build ../backend/public"
+        "build": "cd frontend && npm run build && mv build ../backend/public"
     },
     "dependencies": {
         "concurrently": "^4.1.1"
