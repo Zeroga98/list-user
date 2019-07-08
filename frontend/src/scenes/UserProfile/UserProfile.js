@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './UserProfile.scss';
 import { connect } from 'react-redux';
 import userActions from '../../services/user/reducer';
+import { Link } from 'react-router-dom';
 
 class UserProfile extends Component {
 
@@ -26,6 +27,9 @@ class UserProfile extends Component {
                         <div className="d-flex banner-img">
                             <img src={user.avatar} />
                         </div>
+                        <Link to="/" className="logo">
+                            <span>Atras</span>
+                        </Link>
                         <div className="info">
                             <div className="d-flex flex-column info-list">
                                 <img src={user.avatar} />

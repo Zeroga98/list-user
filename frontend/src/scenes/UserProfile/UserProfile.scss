@@ -5,6 +5,18 @@
 
 .banner {
   position: relative;
+  .logo {
+    color: #fff;
+    position: absolute;
+    top: 5%;
+    margin-left: 15px;
+    cursor: pointer;
+    z-index: 9999;
+    span{
+      color: #fff;
+      font-size: 19px;
+    }
+  }
   .banner-img {
     height: 400px;
     background: #292929;
@@ -12,11 +24,11 @@
       width: 100%;
       object-position: 0px calc(60%);
       object-fit: cover;
-      opacity: .5;
+      opacity: 0.5;
       filter: blur(4px);
     }
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
@@ -25,8 +37,8 @@
       z-index: 1;
       -webkit-background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #000 100%);
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #000 100%);
-      transition: all .3s;
-      -webkit-transition: all .3s;
+      transition: all 0.3s;
+      -webkit-transition: all 0.3s;
     }
   }
   .info {
@@ -36,19 +48,19 @@
     display: flex;
     width: 100%;
     z-index: 2;
-    margin: 0 calc(50% - 263px/2);
-    .title{
-        font-size: 32px;
-        text-align: center;
-        margin-top: 10px;
+    margin: 0 calc(50% - 263px / 2);
+    .title {
+      font-size: 32px;
+      text-align: center;
+      margin-top: 10px;
     }
-    .info-list{
+    .info-list {
       text-overflow: ellipsis;
       width: 263px;
       overflow: hidden;
-      span{
+      span {
         font-weight: 100;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -61,20 +73,20 @@
       .title {
         color: #fff;
         font-size: 32px;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 100;
       }
       .genered {
         color: #fff;
         font-size: 16px;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 100;
         margin: 15px 0;
       }
       .ranked {
         color: #fff;
         font-size: 18px;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 100;
         border: 2px solid #fff;
         border-radius: 100%;
@@ -101,7 +113,7 @@
     }
     span {
       font-size: 24px;
-      font-family: 'Monstserra', sans-serif;
+      font-family: "Monstserra", sans-serif;
       vertical-align: middle;
       margin-left: 5px;
       font-weight: 100;
@@ -114,17 +126,17 @@
   }
 }
 @include media-breakpoint-down(md) {
-  .btn-angle{
-    display: block!important;
+  .btn-angle {
+    display: block !important;
   }
   .movie-detail {
-    margin: 0 auto!important;
-    width: 100%!important;
+    margin: 0 auto !important;
+    width: 100% !important;
   }
-  .banner .info{
+  .banner .info {
     top: 0;
-    .info-list{
-      span{
+    .info-list {
+      span {
         display: none;
       }
     }
