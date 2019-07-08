@@ -14,4 +14,11 @@ router.get('/user', function (req, res, next) {
     });
 });
 
+router.get('/user-profile/:id', function (req, res, next) {
+    request(`https://reqres.in/api/users/${req.params.id}`, function (error, response, body) {
+        var req = JSON.parse(body);
+        return res.json(req.data);
+    });
+});
+
 module.exports = router;
