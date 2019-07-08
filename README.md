@@ -2,7 +2,7 @@
 
 In the project directory, you can run:
 
-### `npm run install`
+### `npm run install and postinstall`
 Install the necessary dependencies for the backend and application
 
 ### `npm run start`
